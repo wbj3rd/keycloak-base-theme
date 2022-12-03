@@ -17,7 +17,22 @@
                         </select>
                 </div>
             </div>          
-          
+            <div hidden class="${properties.kcFormGroupClass!} ${messagesPerField.printIfExists('industry',properties.kcFormGroupErrorClass!)} businessOnly">
+                <div class="${properties.kcInputWrapperClass!}">
+                    <select       id="user.attributes.industry"
+                        class="${properties.kcInputClass!}"
+                        name="user.attributes.industry"
+
+                        value="${(register.formData['user.attributes.industry']!'')}">
+                        <option value="" disabled selected>Select Your Industry Type</option>
+                            <option value="Real Estate" title="Client">Real Estate</option>
+                            <option value="Health" title="Health">Health</option>
+                        <option value="Media" title="Media">Media</option>
+                        <option value="Residential Services" title="Residential Services">Residential Services</option>
+                        <option value="Other" title="Other">Other</option>
+                    </select>
+                </div>
+            </div>          
           <div class="${properties.kcFormGroupClass!}">
                 <div class="${properties.kcLabelWrapperClass!}">
                     <label for="firstName" class="${properties.kcLabelClass!}">${msg("firstName")}</label>
