@@ -6,7 +6,12 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="robots" content="noindex, nofollow">
-
+           <link href="/resources/jehtv/common/keycloak/web_modules/@patternfly/react-core/dist/styles/base.css" rel="stylesheet">
+            <link href="/resources/jehtv/common/keycloak/web_modules/@patternfly/react-core/dist/styles/app.css" rel="stylesheet">
+            <link href="/resources/jehtv/common/keycloak/node_modules/patternfly/dist/css/patternfly.min.css" rel="stylesheet">
+            <link href="/resources/jehtv/common/keycloak/node_modules/patternfly/dist/css/patternfly-additions.min.css" rel="stylesheet">
+            <link href="/resources/jehtv/common/keycloak/lib/pficon/pficon.css" rel="stylesheet">
+            <link href="/resources/jehtv/login/keycloak/css/login.css" rel="stylesheet">
     <#if properties.meta?has_content>
         <#list properties.meta?split(' ') as meta>
             <meta name="${meta?split('==')[0]}" content="${meta?split('==')[1]}"/>
