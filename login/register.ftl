@@ -84,6 +84,21 @@
     
     });
     </script>
+             <div hidden class="${properties.kcFormGroupClass!} ${messagesPerField.printIfExists('agent_type',properties.kcFormGroup agentOnly" >  
+            <div class="${properties.kcInputWrapperClass!} ">
+                <select       id="user.attributes.agent_type"
+                class="${properties.kcInputClass!}"
+                name="user.attributes.agent_type"
+
+                value="${(register.formData['user.attributes.agent_type']!'')}">
+                <option value="" disabled selected>Select Your Agent Type</option>
+                    <option value="receptionist" title="Receptionist">Receptionist</option>
+                    <option value="sales" title="Sales">Sales</option>
+                <option value="help_desk" title="Help Desk">Help Desk</option>
+                <option value="call_logger" title="Call Logger">Call Logger</option>
+                </select>
+        </div>   
+    
             <div class="${properties.kcFormGroupClass!}">
                 <div class="${properties.kcLabelWrapperClass!}">
                     <label for="lastName" class="${properties.kcLabelClass!}">${msg("lastName")}</label>
