@@ -4,7 +4,21 @@
         ${msg("registerTitle")}
     <#elseif section = "form">
         <form id="kc-register-form" class="${properties.kcFormClass!}" action="${url.registrationAction}" method="post">
-            <div class="${properties.kcFormGroupClass!}">
+            <div class="${properties.kcFormGroupClass!} ${messagesPerField.printIfExists('role',properties.kcFormGroupErrorClass!)}">
+                <div class="${properties.kcInputWrapperClass!}">
+                        <select       id="user.attributes.role"
+                            class="${properties.kcInputClass!}"
+                            name="user.attributes.role"
+
+                            value="${(register.formData['user.attributes.role']!'')}">
+                            <option value="" disabled selected>Select Your Account Type</option>
+                            <option value="Client" title="Client">Business</option>
+                            <option value="Agent" title="Agent">Agent</option>
+                        </select>
+                </div>
+            </div>          
+          
+          <div class="${properties.kcFormGroupClass!}">
                 <div class="${properties.kcLabelWrapperClass!}">
                     <label for="firstName" class="${properties.kcLabelClass!}">${msg("firstName")}</label>
                 </div>
