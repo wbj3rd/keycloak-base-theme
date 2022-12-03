@@ -84,7 +84,7 @@
     
     });
     </script>
-             <div hidden class="${properties.kcFormGroupClass!} ${messagesPerField.printIfExists('agent_type',properties.kcFormGroup agentOnly" >  
+             <div hidden class="${properties.kcFormGroupClass!} ${messagesPerField.printIfExists('agent_type',properties.kcFormGroup)} agentOnly" >  
             <div class="${properties.kcInputWrapperClass!} ">
                 <select       id="user.attributes.agent_type"
                 class="${properties.kcInputClass!}"
