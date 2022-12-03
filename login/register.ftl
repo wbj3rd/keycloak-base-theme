@@ -50,7 +50,40 @@
                     </#if>
                 </div>
             </div>
+   <script>
+    document.addEventListener("DOMContentLoaded", function(event) { 
+    //do work
+    console.log("Javascript")
+    document.getElementById("user.attributes.role").addEventListener('change', (event) => {
+        if(event.target.selectedOptions[0].value==="Client"){
+        const collection = document.getElementsByClassName("businessOnly");
+        for (let i = 0; i < collection.length; i++) {
+            collection[i].hidden = false;
+            }
+        const collection2 = document.getElementsByClassName("agentOnly");
+            for (let i = 0; i < collection2.length; i++) {
+                    collection2[i].hidden = true;
+                    }
 
+        }else{
+                const collection = document.getElementsByClassName("businessOnly");
+            for (let i = 0; i < collection.length; i++) {
+                    collection[i].hidden = true;
+                    }
+
+    const collection2 = document.getElementsByClassName("agentOnly");
+            for (let i = 0; i < collection2.length; i++) {
+                    collection2[i].hidden = false;
+                    }
+        }
+    })
+    });
+    const element = document.getElementById("user.attributes.role");
+    element.addEventListener("click", function() {
+        console.log('DOUBLE')
+    
+    });
+    </script>
             <div class="${properties.kcFormGroupClass!}">
                 <div class="${properties.kcLabelWrapperClass!}">
                     <label for="lastName" class="${properties.kcLabelClass!}">${msg("lastName")}</label>
