@@ -18,8 +18,8 @@
                         <option value="Agent" title="Agent">Agent</option>
                     </select>
             </div>
-            <div hidden class="${properties.kcFormGroupClass!} ${messagesPerField.printIfExists('industry',properties.kcFormGroupErrorClass!)} businessOnly">
-                <div class="${properties.kcInputWrapperClass!}">
+           
+                <div hidden  class="${properties.kcInputWrapperClass!}  businessOnly">
                     <select       id="user.attributes.industry"
                         class="${properties.kcInputClass!}"
                         name="user.attributes.industry"
@@ -32,7 +32,7 @@
                         <option value="Residential Services" title="Residential Services">Residential Services</option>
                         <option value="Other" title="Other">Other</option>
                     </select>
-                </div>
+                
             </div>
             </div>    
             <script>
