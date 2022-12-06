@@ -5,6 +5,10 @@
     <#elseif section = "form">
         <form id="kc-register-form" class="${properties.kcFormClass!}" action="${url.registrationAction}" method="post">
         <div class="${properties.kcFormGroupClass!} ${messagesPerField.printIfExists('role',properties.kcFormGroupErrorClass!)}">
+            <div class="${properties.kcFormGroupClass!}">
+                <div class="${properties.kcLabelWrapperClass!}">
+                    <label for="firstName" class="${properties.kcLabelClass!}">${msg("firstName")}</label>
+                </div>           
             <div class="${properties.kcInputWrapperClass!}">
                     <select       id="user.attributes.role"
                         class="${properties.kcInputClass!}"
@@ -15,6 +19,7 @@
                         <option value="Client" title="Client">Business</option>
                         <option value="Agent" title="Agent">Agent</option>
                     </select>
+            </div>
             </div>            
             <div class="${properties.kcFormGroupClass!}">
                 <div class="${properties.kcLabelWrapperClass!}">
