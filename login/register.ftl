@@ -7,7 +7,7 @@
         <div class="${properties.kcFormGroupClass!} ${messagesPerField.printIfExists('role',properties.kcFormGroupErrorClass!)}">
             <div class="${properties.kcFormGroupClass!}">
                 <div class="${properties.kcLabelWrapperClass!}">
-                    <label for="firstName" class="${properties.kcLabelClass!}">${msg("firstName")}</label>
+                    <label for="role" class="${properties.kcLabelClass!}">${msg("role")}</label>
                 </div>           
             <div class="${properties.kcInputWrapperClass!}">
                     <select       id="user.attributes.role"
