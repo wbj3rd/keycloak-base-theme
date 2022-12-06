@@ -38,7 +38,7 @@
             </div>  
             <div hidden class="${properties.kcFormGroupClass!}  ${messagesPerField.printIfExists('businessName',properties.kcFormGroupErrorClass!)} businessOnly">
                 <div class="${properties.kcLabelWrapperClass!}">
-                    <label for="businessName" class="${properties.kcLabelClass!}">${msg("businessName")}</label>
+                    <label for="businessName" class="${properties.kcLabelClass!}">${msg("Business Name")}</label>
                 </div>
                 <div class="${properties.kcInputWrapperClass!}">
                     <input type="text" id="businessName" class="${properties.kcInputClass!}" name="businessName"
