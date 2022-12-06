@@ -19,7 +19,7 @@
                     </select>
             </div>
            </div>
-            <div hidden class="${properties.kcFormGroupClass!} ${messagesPerField.printIfExists('role',properties.kcFormGroupErrorClass!)} businessOnly">
+            <div hidden class="${properties.kcFormGroupClass!} ${messagesPerField.printIfExists('industry',properties.kcFormGroupErrorClass!)} businessOnly">
                 <div  class="${properties.kcInputWrapperClass!}  ">
                     <select       id="user.attributes.industry"
                         class="${properties.kcInputClass!}"
@@ -36,7 +36,24 @@
                 
             </div>
             </div>  
-              
+            <div hidden class="${properties.kcFormGroupClass!}  ${messagesPerField.printIfExists('businessName',properties.kcFormGroupErrorClass!)} businessOnly">
+                <div class="${properties.kcLabelWrapperClass!}">
+                    <label for="businessName" class="${properties.kcLabelClass!}">${msg("businessName")}</label>
+                </div>
+                <div class="${properties.kcInputWrapperClass!}">
+                    <input type="text" id="businessName" class="${properties.kcInputClass!}" name="businessName"
+                           value="${(register.formData.businessName!'')}"
+                           aria-invalid="<#if messagesPerField.existsError('businessName')>true</#if>"
+                           placeholder="Business Name"
+                    />
+
+                    <#if messagesPerField.existsError('businessName')>
+                        <span id="input-error-firstname" class="${properties.kcInputErrorMessageClass!}" aria-live="polite">
+                            ${kcSanitize(messagesPerField.get('businessName'))?no_esc}
+                        </span>
+                    </#if>
+                </div>
+            </div>              
             <script>
                     document.addEventListener("DOMContentLoaded", function(event) { 
                     //do work
