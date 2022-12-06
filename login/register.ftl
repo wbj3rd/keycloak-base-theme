@@ -4,7 +4,7 @@
         ${msg("registerTitle")}
     <#elseif section = "form">
         <form id="kc-register-form" class="${properties.kcFormClass!}" action="${url.registrationAction}" method="post">
-        <div class=" ${messagesPerField.printIfExists('role',properties.kcFormGroupErrorClass!)}">
+        <div class="${properties.kcFormGroupClass!} ${messagesPerField.printIfExists('role',properties.kcFormGroupErrorClass!)}">
            
              
             <div class="${properties.kcInputWrapperClass!}">
