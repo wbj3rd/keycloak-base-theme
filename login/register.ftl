@@ -18,8 +18,9 @@
                         <option value="Agent" title="Agent">Agent</option>
                     </select>
             </div>
-           
-                <div hidden  class="${properties.kcInputWrapperClass!}  businessOnly">
+           </div>
+            <div hidden class="${properties.kcFormGroupClass!} ${messagesPerField.printIfExists('role',properties.kcFormGroupErrorClass!)} businessOnly">
+                <div  class="${properties.kcInputWrapperClass!}  ">
                     <select       id="user.attributes.industry"
                         class="${properties.kcInputClass!}"
                         name="user.attributes.industry"
